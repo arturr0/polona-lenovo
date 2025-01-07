@@ -1,0 +1,93 @@
+	
+totalElements	108960
+number	0
+size	10
+numberOfElements	10
+totalPages	10896
+first	true
+last	false
+hits	[]
+aggregations	
+
+rights	
+values	
+0	
+value	"Publikacja chroniona prawem autorskim - reprodukcja cyfrowa dostępna w czytelniach BN i na terminalach Academiki"
+count	77650
+1	
+value	"Domena Publiczna. Wolno zwielokrotniać, zmieniać i rozpowszechniać oraz wykonywać utwór, nawet w celach komercyjnych, bez konieczności pytania o zgodę. Wykorzystując utwór należy pamiętać o poszanowaniu autorskich praw osobistych Twórcy."
+count	23996
+2	
+value	"Publikacja chroniona prawem autorskim - reprodukcja cyfrowa dostępna w czytelniach BN"
+count	2501
+3	
+value	"Publikacja udostępniona za zgodą wydawcy. Całość ani żadna z jej części nie może być przetwarzana ani wykorzystywana w celach komercyjnych"
+count	1511
+4	
+value	"Utwór udostępniony za zgodą wydawcy. Całość ani żadna z jej części nie może być przetwarzana ani wykorzystywana w celach komercyjnych"
+count	576
+5	
+value	"Publikacja chroniona prawem autorskim"
+count	260
+6	
+value	"Uznanie Autorstwa – Użycie Niekomercyjne – Bez Utworów Zależnych 4.0"
+count	220
+7	
+value	"Publikacja udostępniona za zgodą autora. Całość ani żadna z jej części nie może być przetwarzana ani wykorzystywana w celach komercyjnych"
+count	212
+8	
+value	"Uznanie Autorstwa – Bez Utworów Zależnych 4.0"
+count	211
+9	
+value	"Uznanie Autorstwa – Użycie Niekomercyjne – Bez Utworów Zależnych 3.0 Polska"
+count	195
+10	
+value	"Publikacja udostępniona za zgodą spadkobierców autora. Całość ani żadna z jej części nie może być przetwarzana ani wykorzystywana w celach komercyjnych"
+count	193
+11	
+value	"Uznanie Autorstwa – Bez Utworów Zależnych 3.0 Polska"
+count	163
+12	
+value	"Publikacja udostępniona za zgodą autora oraz wydawcy. Całość ani żadna z jej części nie może być przetwarzana ani wykorzystywana w celach komercyjnych"
+count	161
+13	
+value	"Uznanie Autorstwa – Bez Utworów Zależnych 4.0 Międzynarodowe"
+count	95
+14	
+value	"Uznanie Autorstwa – Na Tych Samych Warunkach 4.0"
+count	88
+15	
+value	"Uznanie Autorstwa – Użycie Niekomercyjne – Bez Utworów Zależnych 4.0 Międzynarodowe."
+count	68
+16	
+value	"prawa autorskie"
+count	68
+17	
+value	"Utwór udostępniony za zgodą wydawcy i autora/ów. Całość ani żadna z jej części nie może być przetwarzana ani wykorzystywana w celach komercyjnych."
+count	58
+18	
+value	"Uznanie Autorstwa – Na Tych Samych Warunkach 3.0 Polska"
+count	58
+19	
+value	"Utwór udostępniony za zgodą spadkobierców autora. Całość ani żadna z jej części nie może być przetwarzana ani wykorzystywany w celach komercyjnych"
+count	41
+20	
+value	"Uznanie Autorstwa 4.0 Międzynarodowe"
+count	40
+21	
+value	"Uznanie Autorstwa 4.0"
+count	35
+22	
+value	"Uznanie Autorstwa – Użycie Niekomercyjne 4.0"
+count	34
+23	
+value	"Uznanie Autorstwa 3.0 Polska"
+count	33
+24	
+value	"Uznanie Autorstwa – Użycie Niekomercyjne 4.0 Międzynarodowe"
+count	32
+labels	
+en	"Copyright"
+pl	"Prawa do utworu"
+indexTarget	"metadata.rights"
+type	"KEYWORD"
