@@ -551,7 +551,7 @@ async function fetchPageContent(url, title) {
       response.headers['content-type']?.includes('application/vnd.openxmlformats-officedocument.wordprocessingml.document');
 
     if (isFileLink) {
-      const downloaded = await downloadFile(url, title);
+      //const downloaded = await downloadFile(url, title);
       if (downloaded) {
         console.log(`Exact match found in file: ${url}`);
         return true;
