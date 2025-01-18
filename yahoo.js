@@ -568,6 +568,7 @@ async function searchOnGoogle(query) {
     // Filter results for the desired criteria
     const filteredResults = results.filter(result => {
       const link = result.url;
+      console.log(link);
       return (
         link.includes('gov.pl') &&  // Filter for .gov.pl domains
         !link.includes('zpe.gov.pl') &&
