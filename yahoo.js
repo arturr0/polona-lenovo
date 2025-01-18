@@ -20,6 +20,7 @@ import net from 'net';
 import puppeteer from 'puppeteer-extra';
 import StealthPlugin from 'puppeteer-extra-plugin-stealth';
 
+import express from 'express';
 // Add the stealth plugin to Puppeteer
 puppeteer.use(StealthPlugin());
 
@@ -44,6 +45,20 @@ const mp3FilePath = join(__dirname, 'error2.mp3');
 //         audioPlay(audioBuffer);
 //     });
 // };
+const app = express();
+
+// Use the environment's PORT or default to 3000 if not set
+const PORT = process.env.PORT || 3000;
+
+// Your routes and other configurations here
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+app.get('/', async (req, res) => {
+    main();
+
+});
 const axiosInstance = axios.create({
   httpsAgent: new https.Agent({
     rejectUnauthorized: false, // Avoid certificate verification issues
@@ -861,7 +876,6 @@ async function searchWhenIPchanged() {
     console.log(notSearchedPolonaData[i]);
 }
 
-main();
 
 //await searchOnGoogle("Mickiewicz");
 
