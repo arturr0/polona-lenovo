@@ -9,8 +9,8 @@ import stream from 'stream';
 import xlsx from 'xlsx'; // For XLS parsing
 import { parse as csvParse } from 'csv-parse'; // Correct import for CSV parsing
 import mammoth from 'mammoth';
-import audioPlay from 'audio-play';
-import audioLoader from 'audio-loader';
+//import audioPlay from 'audio-play';
+//import audioLoader from 'audio-loader';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 //import { resolve } from 'dns';
@@ -29,21 +29,21 @@ const __dirname = dirname(__filename);
 let polonaData;
 // Resolve the file path for the MP3 file
 const mp3FilePath = join(__dirname, 'error2.mp3');
-const playAudio = () => {
-    // Reload and play the audio every time
-    audioLoader(mp3FilePath, (err, buffer) => {
-        if (err) {
-            console.error('Error loading audio:', err);
-            return;
-        }
+// const playAudio = () => {
+//     // Reload and play the audio every time
+//     audioLoader(mp3FilePath, (err, buffer) => {
+//         if (err) {
+//             console.error('Error loading audio:', err);
+//             return;
+//         }
 
-        // Store the audio buffer for future use
-        audioBuffer = buffer;
+//         // Store the audio buffer for future use
+//         audioBuffer = buffer;
 
-        // Play the audio
-        audioPlay(audioBuffer);
-    });
-};
+//         // Play the audio
+//         audioPlay(audioBuffer);
+//     });
+// };
 const axiosInstance = axios.create({
   httpsAgent: new https.Agent({
     rejectUnauthorized: false, // Avoid certificate verification issues
@@ -177,7 +177,7 @@ async function requestWithRetry(url, retries = 5, delayBetweenRetries = 2000) {
       
 
       // Play the notification audio
-      playAudio();
+      //playAudio();
 
       // Collect the remaining unsearched data
       console.log(title);
@@ -867,7 +867,7 @@ main();
 
 async function handle429() {
   // Play the notification audio (uncomment and implement if needed)
-  playAudio();
+  //playAudio();
 
   // Collect the remaining unsearched data
   console.log(title);
