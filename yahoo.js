@@ -509,10 +509,50 @@ async function getRandomUserAgent(currentUserAgent = null) {
 
 //await fetchPageContent("https://kronika.gov.pl/obiekt/16750323", "Z zagadnień dydaktyki historyi");
 
-async function searchOnGoogle(query) {
- const apiKey = process.env.YAHOO_API_KEY;  // Accessing the API key from environment variables
-const apiUrl = `https://yboss.yahooapis.com/ysearch/web/v1/${encodeURIComponent(query)}?format=json&count=10&apiKey=${apiKey}`;
+// async function searchOnGoogle(query) {
+//  const apiKey = process.env.YAHOO_API_KEY;  // Accessing the API key from environment variables
+// const apiUrl = `https://yboss.yahooapis.com/ysearch/web/v1/${encodeURIComponent(query)}?format=json&count=10&apiKey=${apiKey}`;
 
+
+//   try {
+//     // Make the API request to Yahoo Search BOSS
+//     const response = await axios.get(apiUrl, {
+//       headers: {
+//         'Authorization': `Bearer ${apiKey}`,
+//       },
+//     });
+
+//     // Extract search results
+//     const results = response.data.web.results;
+
+//     // Filter results for the desired criteria
+//     const filteredResults = results.filter(result => {
+//       const link = result.url;
+//       return (
+//         link.includes('gov.pl') &&  // Filter for .gov.pl domains
+//         !link.includes('zpe.gov.pl') &&
+//         !link.includes('sejm.gov.pl') &&
+//         !link.includes('senat.gov.pl') &&
+//         !link.includes('ipn.gov.pl') &&
+//         !link.includes('cbs.stat.gov.pl') &&
+//         !link.includes('abw.gov.pl') &&
+//         !link.includes('policja.gov.pl')
+//       );
+//     });
+
+//     // Return the filtered results
+//     return filteredResults.map(result => ({
+//       title: result.title,
+//       link: result.url,
+//     }));
+//   } catch (error) {
+//     console.error(`Error in searchOnYahoo: ${error.message}`);
+//     return [];  // Return an empty array to handle errors gracefully
+//   }
+// }
+async function searchOnGoogle(query) {
+  const apiKey = process.env.YAHOO_API_KEY;  // Make sure your API key is set correctly
+  const apiUrl = `https://yboss.yahooapis.com/ysearch/web/v1/${encodeURIComponent(query)}?format=json&count=10`;
 
   try {
     // Make the API request to Yahoo Search BOSS
@@ -546,10 +586,11 @@ const apiUrl = `https://yboss.yahooapis.com/ysearch/web/v1/${encodeURIComponent(
       link: result.url,
     }));
   } catch (error) {
-    console.error(`Error in searchOnYahoo: ${error.message}`);
+    console.error('Error in searchOnYahoo:', error.response ? error.response.data : error.message);
     return [];  // Return an empty array to handle errors gracefully
   }
 }
+
 
 async function fetchPageContent(url, title) {
   try {
