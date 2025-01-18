@@ -495,8 +495,9 @@ async function getRandomUserAgent(currentUserAgent = null) {
 //await fetchPageContent("https://kronika.gov.pl/obiekt/16750323", "Z zagadnień dydaktyki historyi");
 
 async function searchOnGoogle(query) {
-  const apiKey = '9AbLqrqw';  // Replace with your Yahoo API key
-  const apiUrl = `https://yboss.yahooapis.com/ysearch/web/v1/${encodeURIComponent(query)}?format=json&count=10`;
+ const apiKey = process.env.YAHOO_API_KEY;  // Accessing the API key from environment variables
+const apiUrl = `https://yboss.yahooapis.com/ysearch/web/v1/${encodeURIComponent(query)}?format=json&count=10&apiKey=${apiKey}`;
+
 
   try {
     // Make the API request to Yahoo Search BOSS
