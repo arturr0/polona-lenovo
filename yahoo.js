@@ -71,7 +71,7 @@ let audioBuffer;
 // Setup log file and write stream
 //const logFile = path.resolve('logs.json');
 //const logFile = resolve(__dirname, 'logs.json');
-const logFile = path.resolve(__dirname, 'logs.json');
+//const logFile = path.resolve(__dirname, 'logs.json');
 
 let logQueue = [];
 let isWriting = false;
@@ -89,7 +89,7 @@ function appendToLogFile(logType, message) {
   }
   const logEntry = { type: logType, message, timestamp: new Date().toISOString() };
   logQueue.push(logEntry);
-  processLogQueue();
+  //processLogQueue();
 }
 
 
@@ -122,20 +122,20 @@ async function processLogQueue() {
 
 
 // Override console.log
-const originalLog = console.log;
-console.log = (...args) => {
-  const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : arg)).join(' ');
-  appendToLogFile('log', message);
-  originalLog(...args);
-};
+// const originalLog = console.log;
+// console.log = (...args) => {
+//   const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : arg)).join(' ');
+//   appendToLogFile('log', message);
+//   originalLog(...args);
+// };
 
-// Override console.error
-const originalError = console.error;
-console.error = (...args) => {
-  const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : arg)).join(' ');
-  appendToLogFile('error', message);
-  originalError(...args);
-};
+// // Override console.error
+// const originalError = console.error;
+// console.error = (...args) => {
+//   const message = args.map(arg => (typeof arg === 'object' ? JSON.stringify(arg) : arg)).join(' ');
+//   appendToLogFile('error', message);
+//   originalError(...args);
+// };
 
 // Utility function for delay
 //const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -902,8 +902,8 @@ async function main() {
     totalSearchTime = (searchEndTime - searchStartTime) / 1000;
 
     console.log(`Found ${exactMatches.length} exact matches`);
-    await saveToJSON(resultsFile, results);
-    await saveToJSON(exactMatchesFile, exactMatches);
+    // await saveToJSON(resultsFile, results);
+    // await saveToJSON(exactMatchesFile, exactMatches);
     console.log(`Total search time: ${(totalSearchTime / 60).toFixed(2)} minutes`);
 
   } catch (error) {
