@@ -5,7 +5,7 @@ import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
 import stream from 'stream';
-import pdf from 'pdf-parse'; // For PDF parsing
+
 import xlsx from 'xlsx'; // For XLS parsing
 import { parse as csvParse } from 'csv-parse'; // Correct import for CSV parsing
 import mammoth from 'mammoth';
