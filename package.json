@@ -21,7 +21,6 @@
     "module-alias": "^2.2.3",
     "node-fetch": "^3.3.2",
     "path": "^0.12.7",
-    "pdf-parse": "^1.1.1",
     "play-sound": "^1.1.6",
     "playwright": "^1.49.1",
     "puppeteer": "^24.1.0",
